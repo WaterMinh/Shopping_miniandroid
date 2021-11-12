@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2"
+    android:padding="5dp">
+
+    <EditText
+        android:id="@+id/editTenmonhang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên món hàng"
+        android:inputType="textCapWords"/>
+    <EditText
+        android:id="@+id/editSoluong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số lượng"
+        android:gravity="right"
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/editGiatien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gía tiền"
+        android:gravity="right"
+        android:inputType="number"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/pickNgayMua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Ngày mua hàng"
+            android:gravity="center"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="openDatePicker"
+            android:inputType="none"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="( 2021-03-08 )"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="insert"
+            android:text="Thêm"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sửa"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:enabled="false"
+            android:onClick="update"/>
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:layout_weight="1"
+            android:onClick="delete"
+            android:layout_alignParentBottom="true"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>
